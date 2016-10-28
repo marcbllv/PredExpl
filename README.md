@@ -40,15 +40,18 @@ extract each feature contribution.
 
 #### Linear models
 
-In a linear model, the final prediction is the sum of the feature value and the
-regression coefficient, plus some overall bias. So on a prediction level,
-multiplying each regression coefficient by the feature value give the direct
-influence of the feature value on the prediction.
+By definition linear models are the easiest to interpret without an on-top
+explanation algorithm: one only has to look at the coefficients to see the
+relative importance of each variable.
+
+We can also compute the direct contribution to the outcome: the final
+prediction is the sum of the feature value and the regression coefficient, plus
+some overall bias. So on a prediction level, multiplying each regression
+coefficient by the feature value give the direct influence of the feature value
+on the prediction.
 
 Moreover, the coefficient directly gives an idea on how the prediction is going
 to evolve when perturbing a feature.
-
-***Image***
 
 #### Tree-based algorithms
 
@@ -121,17 +124,9 @@ with a kernel density estimation. Once the desity is recovered using a gaussian
 kernel for instance, it's then easy to compute the gradient which is then
 called an *explanation vector*.
 
+Check [this article](http://www.jmlr.org/papers/volume11/baehrens10a/baehrens10a.pdf)
+from the journal of ML research.
+
 ![Explanation vectors](img/explanation_vectors)
 
-
-
-[German Credit dataset](https://archive.ics.uci.edu/ml/datasets/Statlog+%28German+Credit+Data%29)
-from UCI. This dataset features several banking features about individuals
-willing to get a loan, and a target variable indicating whether the bank should
-lend the money or not. The target is **1 for risky borrower**, and **0 for non
-risky borrowers**.
-
-### Imports & data retrieval
-
-Let's import some packages & the data
 
