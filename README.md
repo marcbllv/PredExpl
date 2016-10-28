@@ -79,10 +79,12 @@ For ensemble methods such as Random Forests and Gradient Boosted Trees, each
 feature contribution is simply the average of each decision tree's feature
 contribution.
 
-This method is interesting to identify the important features involved in the
-prediction, but it lacks a sign: it's not possible to know whether x1 should be
-increased or decreased to switch the outcome of the prediction.
+You can find an implementation of this method
+[here](https://github.com/andosa/treeinterpreter).
 
+Yet, even if this method is interesting to identify the important features
+involved in the prediction, it lacks a sign: it's not possible to know whether
+x1 should be increased or decreased to switch the outcome of the prediction.
 
 ### Model-independant explanations
 
@@ -112,7 +114,11 @@ want to explain.
 [An implementation](http://github.com/marcotcr/lime) has been made on github by
 the author.
 
-Here are several notebooks about lime
+Here are several notebooks about lime:
+
+-  
+-  
+-  
 
 #### Explanation vectors
 
@@ -127,6 +133,6 @@ called an *explanation vector*.
 Check [this article](http://www.jmlr.org/papers/volume11/baehrens10a/baehrens10a.pdf)
 from the journal of ML research.
 
-![Explanation vectors](img/explanation_vectors)
+![Explanation vectors](img/explanation_vectors.png)
 
 
