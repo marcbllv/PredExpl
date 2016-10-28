@@ -33,12 +33,12 @@ important ones regarding a specific prediction.
 Several methods has been published and are being developped. They can mainly be
 classified into model-dependant and model-independant explanation system.
 
-#### Model dependant methods
+### Model dependant methods
 
 The first solution is to look at how a given model actually works, and try to
 extract each feature contribution.
 
-#####Linear models
+#### Linear models
 
 In a linear model, the final prediction is the sum of the feature value and the
 regression coefficient, plus some overall bias. So on a prediction level,
@@ -50,7 +50,7 @@ to evolve when perturbing a feature.
 
 ***Image***
 
-##### Tree-based algorithms
+#### Tree-based algorithms
 
 For a decision tree, extracting features contributions means check the path in
 the tree to reach a given point.
@@ -81,7 +81,7 @@ prediction, but it lacks a sign: it's not possible to know whether x1 should be
 increased or decreased to switch the outcome of the prediction.
 
 
-#### Model-independant explanations
+### Model-independant explanations
 
 The problem that comes with model independant explanations is that they often
 can't be compared between each others. Two different models on the same data
@@ -89,7 +89,7 @@ would lead to two different kind of explanations that would be difficult to
 compare. So having an explainer that would work on every kind of model would be
 very useful.
 
-##### Lime
+#### Lime
 
 Lime stands for Locally Interpretable Model-agnostic Explanations. It's a local
 approximation of a complicated model by a interpretable one, namely a linear
@@ -111,7 +111,7 @@ the author.
 
 Here are several notebooks about lime
 
-##### Explanation vectors
+#### Explanation vectors
 
 Another way to locally explain the prediction is to compute the gradient of the
 model output arount the point. This is quite similar to lime because the
@@ -121,7 +121,7 @@ with a kernel density estimation. Once the desity is recovered using a gaussian
 kernel for instance, it's then easy to compute the gradient which is then
 called an *explanation vector*.
 
-***Image***
+![Explanation vectors](img/explanation_vectors)
 
 
 
@@ -131,7 +131,7 @@ willing to get a loan, and a target variable indicating whether the bank should
 lend the money or not. The target is **1 for risky borrower**, and **0 for non
 risky borrowers**.
 
-#### Imports & data retrieval
+### Imports & data retrieval
 
 Let's import some packages & the data
 
