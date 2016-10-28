@@ -55,7 +55,7 @@ to evolve when perturbing a feature.
 For a decision tree, extracting features contributions means check the path in
 the tree to reach a given point.
 
-***Image***
+![Path through the tree](img/tree1.png)
 
 Each split on the path moves the prediction up or down, and at each split a
 single feature is involved. So computing the output difference at each split
@@ -63,7 +63,7 @@ will indicate the feature influence for that split. For a given feature, we can
 sum up the contributions for all the splits this is feature is involved. Thus,
 the output predictions can be written:
 
-*P(y = red | x1, x2) = Global_Bias + ∑ contributionf (x)*
+*P(y = red | x1, x2) = Global_Bias + ∑ contribution_f(x)*
 
 On the tree example above, we would have:
 - contribution from x1: 0.59
@@ -104,7 +104,7 @@ fits a linear model between these samples and their predicted value by the
 model. So it is a local approximation of the model outcome around the line we
 want to explain.
 
-***Image***
+![Lime explanations](img/lime.png)
 
 [An implementation](http://github.com/marcotcr/lime) has been made on github by
 the author.
