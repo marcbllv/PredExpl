@@ -116,8 +116,8 @@ the author.
 
 Here are several notebooks about lime:
 
--  
--  
+- [On a credit dataset](german_credit.ipynb)  
+- [On a house prices dataset](houses.ipynb) 
 -  
 
 #### Explanation vectors
