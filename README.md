@@ -18,6 +18,8 @@ Typical examples could be:
 - In predictive maintenance: why is it supposed to break, and what can we do about it ?
 - In pricing prediction: which features tends to lower or increase the price ?
 
+This is going to become a field of major importance soon as the European Union will impose a right to explanation for citizens: when a decision that concerns directly an individual will be taken by an algorithm, this person could ask the decision maker why such a decision has been made. In Machine Learning, this means for companies to be able to extract explanations automatically even from black-boxes algorithms.
+
 ### How we can do it
 
 What we want is to measure the influence of each feature and extract the most
@@ -34,7 +36,22 @@ extract each feature contribution.
 
 In a linear model, the final prediction is the sum of the feature value and the regression coefficient, plus some overall bias. So on a prediction level, multiplying each regression coefficient by the feature value give the direct influence of the feature value on the prediction.
 
+Moreover, the coefficient directly gives an idea on how the prediction is going to evolve when perturbing a feature.
+
 ***Image***
+
+##### Tree-based algorithms
+
+For a decision tree, extracting features contributions means check the path in the tree to reach a given point.
+
+***Image***
+
+Each split on the path moves the prediction up or down, and at each split a single feature is involved. So computing the output difference at each split will indicate the feature influence for that split. For a given feature, we can sum up the contributions for all the splits this is feature is involved.
+
+$$P(y = red | x1, x2) = Global_Bias + \sum_f contribution_f(x)$$
+
+
+
 
 
 
