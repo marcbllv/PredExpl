@@ -23,7 +23,7 @@ Typical examples could be:
 ![The EU will impose a right to explanation for european citizens](img/eu-flag.jpg)
 
 This is going to become a field of major importance soon as the European Union
-will grant [a right to explanation](https://arxiv.org/pdf/1606.08813v3.pdf) for european citizens: when a decision that concerns
+will grant a right to explanation for european citizens: when a decision that concerns
 directly an individual will be taken by an algorithm, this person could ask the
 decision maker why such a decision has been made. In Machine Learning, this
 means for companies to be able to extract explanations automatically even from
@@ -38,6 +38,9 @@ means *at least one human being* in the process. This is why automating
 explanation is going to be a key issue in the following years: no man can
 reasonably find explanations for a decision taken by the complex models widely
 used today.
+
+You can read more in [this article](http://fusion.net/story/321178/european-union-right-to-algorithmic-explanation/)
+or in [this paper](https://arxiv.org/pdf/1606.08813v3.pdf).
 
 ### How we can do it
 
@@ -58,11 +61,16 @@ By definition linear models are the easiest to interpret without an on-top
 explanation algorithm: one only has to look at the coefficients to see the
 relative importance of each variable.
 
-We can also compute the direct contribution to the outcome: the final
-prediction is the sum of the feature value and the regression coefficient, plus
+We can also compute the direct contribution to the outcome: the output depends
+directly on the sum of the feature value times the regression coefficient, plus
 some overall bias. So on a prediction level, multiplying each regression
 coefficient by the feature value give the direct influence of the feature value
 on the prediction.
+
+For linear regression, output is actually equal to the sum of each contribution (plus the bias). For classification, with a logistic regression for instance, the dependance involves a logarithm. But the linear part can still be decomposed onto seveal contributions from each feature. 
+
+![Log reg formula](img/logreg.png)
+*The Logistic Regression output probability, functions of the linear mapping*
 
 Moreover, the coefficient directly gives an idea on how the prediction is going
 to evolve when perturbing a feature.
