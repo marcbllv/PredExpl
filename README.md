@@ -18,12 +18,26 @@ Typical examples could be:
 - In predictive maintenance: why is it supposed to break, and what can we do about it ?
 - In pricing prediction: which features tends to lower or increase the price ?
 
+#### The EU regulation
+
+![The EU will impose a right to explanation for european citizens](img/eu-flag.jpg)
+
 This is going to become a field of major importance soon as the European Union
 will impose a right to explanation for citizens: when a decision that concerns
 directly an individual will be taken by an algorithm, this person could ask the
 decision maker why such a decision has been made. In Machine Learning, this
 means for companies to be able to extract explanations automatically even from
 black-boxes algorithms.
+
+This right to explanation has been stipulated in the General Data Protection
+Regulation (GDPR) and adopted by the parliament in April 2016. It will go into
+effect starting in April 2018. This regulation bans decisions “based solely on
+automated processing, including profiling, which produces an adverse legal
+effect concerning the data subject or significantly affects him or her.” This
+means *at least one human being* in the process. This is why automating
+explanation is going to be a key issue in the following years: no man can
+reasonably find explanations for a decision taken by the complex models widely
+used today.
 
 ### How we can do it
 
