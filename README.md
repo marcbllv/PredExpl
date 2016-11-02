@@ -23,7 +23,7 @@ Typical examples could be:
 ![The EU will impose a right to explanation for european citizens](img/eu-flag.jpg)
 
 This is going to become a field of major importance soon as the European Union
-will impose a right to explanation for citizens: when a decision that concerns
+will grant [a right to explanation](https://arxiv.org/pdf/1606.08813v3.pdf) for european citizens: when a decision that concerns
 directly an individual will be taken by an algorithm, this person could ask the
 decision maker why such a decision has been made. In Machine Learning, this
 means for companies to be able to extract explanations automatically even from
