@@ -70,6 +70,7 @@ on the prediction.
 For linear regression, output is actually equal to the sum of each contribution (plus the bias). For classification, with a logistic regression for instance, the dependance involves a logarithm. But the linear part can still be decomposed onto seveal contributions from each feature. 
 
 ![Log reg formula](img/logreg.png)
+
 *The Logistic Regression output probability, functions of the linear mapping*
 
 Moreover, the coefficient directly gives an idea on how the prediction is going
