@@ -130,6 +130,8 @@ model.
 It's based on this article: ["Why Should I Trust You?": Explaining the
 Predictions of Any Classifier](https://arxiv.org/abs/1602.04938).
 
+![Lime sampling](img/lime_sampling.png)
+
 Lime first sample many points around the interesting point, weight each one of
 them by a kernel depending of the distance from the original point, and then
 fits a linear model between these samples and their predicted value by the
