@@ -10,13 +10,17 @@ of feature and the prediction made by the model.
 In many cases, what we would be interested in would be to know not only the
 prediction, but also *why* such a prediction has been made by the model, on which
 feature the model based it prediction, and what to turn the model output into
-something else.
+something else. This is especially true when a decision is taken by a human who
+relies on a machine learning algorithm: the decision maker should have a proof,
+or at least good insights, that the decision would lead to the best result.
 
 Typical examples could be:
 
-- In fraud detection: why has this person been predicted as a fraudster ?
-- In predictive maintenance: why is it supposed to break, and what can we do about it ?
-- In pricing prediction: which features tends to lower or increase the price ?
+- In fraud detection: why has this person been predicted as a fraudster?
+- In predictive maintenance: why is it supposed to break, and what can we do about it?
+- In pricing prediction: which features tends to lower or increase the price of this product?
+
+In all of these use cases, prediction explanation can help decisions to be made.
 
 #### The EU regulation
 
