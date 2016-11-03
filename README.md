@@ -83,7 +83,13 @@ to evolve when perturbing a feature.
 #### Tree-based algorithms
 
 For a decision tree, extracting features contributions means check the path in
-the tree to reach a given point.
+the tree to reach a given point. In the case of a regression, this path would
+lead to the value associated with the example that is being scored, while in
+the binary classification case this path would lead to one of the classes (0 or
+1).
+
+Here is an example on binary classification where the grey dot is being
+classified by the Decision Tree:
 
 ![Path through the tree](img/tree1.png)
 
@@ -107,7 +113,8 @@ feature contribution is simply the average of each decision tree's feature
 contribution.
 
 You can find an implementation of this method
-[here](https://github.com/andosa/treeinterpreter).
+[here](https://github.com/andosa/treeinterpreter) and it has been tested on a
+house pricing dataset [on this notebook](treeinterpreter.ipynb).
 
 Yet, even if this method is interesting to identify the important features
 involved in the prediction, it lacks a sign: it's not possible to know whether
