@@ -132,9 +132,9 @@ Predictions of Any Classifier](https://arxiv.org/abs/1602.04938).
 
 ![Lime sampling](img/lime_sampling.png)
 
-Lime first sample many points around the interesting point, weight each one of
-them by a kernel depending of the distance from the original point, and then
-fits a linear model between these samples and their predicted value by the
+Lime first **samples many points around** the interesting point, **weights each one of
+them** by a kernel depending of the distance from the original point, and
+**fits a linear model** between these samples and their predicted value by the
 model. So it is a local approximation of the model outcome around the line we
 want to explain.
 
