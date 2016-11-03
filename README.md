@@ -27,7 +27,7 @@ In all of these use cases, prediction explanation can help decisions to be made.
 ![The EU will impose a right to explanation for european citizens](img/eu-flag.jpg)
 
 This is going to become a field of major importance soon as the European Union
-will grant a right to explanation for european citizens: when a decision that concerns
+will grant a **right to explanation for european citizens**: when a decision that concerns
 directly an individual will be taken by an algorithm, this person could ask the
 decision maker why such a decision has been made. In Machine Learning, this
 means for companies to be able to extract explanations automatically even from
@@ -38,7 +38,7 @@ Regulation (GDPR) and adopted by the parliament in April 2016. It will go into
 effect starting in April 2018. This regulation bans decisions “based solely on
 automated processing, including profiling, which produces an adverse legal
 effect concerning the data subject or significantly affects him or her.” This
-means *at least one human being* in the process. This is why automating
+means **at least one human being** in the process. This is why automating
 explanation is going to be a key issue in the following years: no man can
 reasonably find explanations for a decision taken by the complex models widely
 used today.
@@ -48,8 +48,8 @@ or in [this paper](https://arxiv.org/pdf/1606.08813v3.pdf).
 
 ### How we can do it
 
-What we want is to measure the influence of each feature and extract the most
-important ones regarding a specific prediction.
+What we want is to **measure the influence of each feature** and extract the most
+important ones that contributed to a specific prediction by the model.
 
 Several methods has been published and are being developped. They can mainly be
 classified into model-dependant and model-independant explanation system.
@@ -112,9 +112,9 @@ For ensemble methods such as Random Forests and Gradient Boosted Trees, each
 feature contribution is simply the average of each decision tree's feature
 contribution.
 
-You can find an implementation of this method
+You can find **an implementation of this method
 [here](https://github.com/andosa/treeinterpreter) and it has been tested on a
-house pricing dataset [on this notebook](treeinterpreter.ipynb).
+house pricing dataset [on this notebook](treeinterpreter.ipynb).**
 
 Yet, even if this method is interesting to identify the important features
 involved in the prediction, it lacks a sign: it's not possible to know whether
