@@ -164,4 +164,22 @@ from the journal of ML research.
 
 ![Explanation vectors](img/explanation_vectors.png)
 
+#### An interesting way of using Game Theory
+
+In [an article from 2009](http://lkm.fri.uni-lj.si/xaigor/slo/pedagosko/dr-ui/JMLR-Strumbelj-Kononenko.pdf)
+two researchers described an explanation of individual prediction by making a
+parallel between coalitions in a game and feature contributions. In Game
+Theory, it's possible to compute for each play his/her Shapley value, which is
+an indicator on how much influence in average he would have if he were to
+engage in a coalition of players.
+
+So in a group of features, the idea is to determine which feature has the most
+influence, either alone or combined with other features. Computing the Shapley
+value for each feature can therefore give a good insight on how much it
+influences the prediction.
+
+Nonetheless, this methods has a complexity of O(2^n), because it needs to look
+at each subset of features. This is why the author propose an approximation to
+the exact Shapley value.
+
 
