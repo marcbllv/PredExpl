@@ -178,7 +178,13 @@ two researchers described an explanation of individual prediction by making a
 parallel between coalitions in a game and feature contributions. In Game
 Theory, it's possible to compute for each play his/her Shapley value, which is
 an indicator on how much influence in average he would have if he were to
-engage in a coalition of players.
+engage in a coalition of players. For instance at the Council of the European
+Union, each state has a number of votes which is proportional to its
+population, so bigger countries like Germany or France has a greater Shapley
+value than smaller ones because when they get into a coalition, they increase
+the coalition's chances to win the vote. And small countries like Luxembourg
+have a small Shapley value because their small number of votes don't bring much
+power to the coalition.
 
 So in a group of features, the idea is to determine which feature has the most
 influence, either alone or combined with other features. Computing the Shapley
