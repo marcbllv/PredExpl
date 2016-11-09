@@ -147,8 +147,9 @@ want to explain.
 
 ![Lime explanations](img/lime.png)
 
-[An implementation](http://github.com/marcotcr/lime) has been made on github by
-the author.
+**[An implementation](http://github.com/marcotcr/lime) has been released** on
+github by the author. And here is **[a wrapper](lime_wrap)** that makes the use
+of Lime a bit easier.
 
 Here are several notebooks about lime:
 
