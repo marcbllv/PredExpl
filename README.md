@@ -134,16 +134,21 @@ Lime stands for Locally Interpretable Model-agnostic Explanations. It's a local
 approximation of a complicated model by a interpretable one, namely a linear
 model.
 
-It's based on this article: ["Why Should I Trust You?": Explaining the
+It is based on this article: ["Why Should I Trust You?": Explaining the
 Predictions of Any Classifier](https://arxiv.org/abs/1602.04938).
 
 ![Lime sampling](img/lime_sampling.png)
 
-Lime first **samples many points around** the interesting point, **weights each one of
-them** by a kernel depending of the distance from the original point, and
-**fits a linear model** between these samples and their predicted value by the
-model. So it is a local approximation of the model outcome around the line we
-want to explain.
+Lime starts by **sampling many points around** the interesting point, then it
+**weights each one of them** by a kernel depending of the distance from the
+original point, and **fits a linear model** between these samples and their
+predicted value by the model. So it is a local approximation of the model
+outcome around the line we want to explain.
+
+The important parameters here are:
+
+- `kernel_width` which controls the width of the weigthing kernel. The smaller, the more local explanations are.
+- `num_features` that limits the number of displayed features. Note that Lime performs a feature selection before fitting a linear model, so changing this parameter actually changes the output for top features!
 
 ![Lime explanations](img/lime.png)
 
@@ -151,11 +156,16 @@ want to explain.
 github by the author. And here is **[a wrapper](lime_wrap)** that makes the use
 of Lime a bit easier.
 
-Here are several notebooks about lime:
+Lime works on various type of data and models. Here you can find several
+notebooks on text and numerical data: 
 
 - [On a credit dataset - classification](german_credit.ipynb)
 - [On a house prices dataset - regression](houses.ipynb) 
 - [On recipes ingredients dataset - text data](whatscooking.ipynb)
+
+But note that **Lime does not work yet on datasets with text and tabular
+data**. In that case you should turn all your data into numbers, including your
+text, using a count vectorizer or a tfidf for instance.
 
 #### Explanation vectors
 
