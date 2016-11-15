@@ -10,7 +10,7 @@ class LimeWrapper:
         if not isinstance(train, pd.DataFrame):
             raise Exception('Use a pandas DataFrame to store the train set')
 
-        train.fill_na(0.0)
+        train.fillna(0.0)
 
         # Handling target
         if target_column not in train.columns:
