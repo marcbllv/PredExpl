@@ -5,7 +5,8 @@ from lime.lime_tabular import LimeTabularExplainer
 
 class LimeWrapper:
 
-    def __init__(self, train, model, target_column, categorical=[], kernel_width=None):
+    def __init__(self, train, model, target_column, categorical=[],
+                 kernel_width=None, discretizer='quartile', verbose=False):
         if not isinstance(train, pd.DataFrame):
             raise Exception('Use a pandas DataFrame to store the train set')
 
@@ -14,6 +15,14 @@ class LimeWrapper:
             raise Exception('Target column not in train set.')
         target = train[target_column]
         train_x = train.drop(target_column, axis=1)
+
+        # Check discretizer values
+        if discretizer == None:
+            discretize = False
+        else:
+            discretize = True
+            if discretizer not in ['quartile', 'decile', 'entropy']:
+                discretizer = 'quartile'
 
         # Features - detecting categoricals and label encoding
         features = train_x.columns.tolist()
@@ -45,10 +54,14 @@ class LimeWrapper:
 
         # setting up the explainer
         self.explainer = LimeTabularExplainer(train_x.values,
-                feature_names=features, class_names=class_names,
+                feature_names=features, 
+                class_names=class_names,
                 categorical_features=cat_idx,
-                categorical_names=categorical_names, kernel_width=kernel_width,
-                verbose=True)
+                categorical_names=categorical_names,
+                kernel_width=kernel_width,
+                discretize_continuous=discretize,
+                discretizer=discretizer, 
+                verbose=verbose)
 
     def explain(self, instance, num_features=10, num_samples=1000, labels=None, show=True):     
         if not isinstance(instance, pd.Series):
