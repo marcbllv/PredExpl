@@ -1,18 +1,15 @@
 # Prediction explanations
 
-* [Example](#example)
-* [Example2](#example2)
-* [Third Example](#third-example)
-    * [Why explaining individual predictions](#why-explaining-individual-predictions)
-        * [The EU regulation](#the-eu-regulation)
-    * [How we can do it](#how-we-can-do-it)
-    * [Model dependant methods](#model-dependant-methods)
-        * [Linear models](#linear-models)
-        * [Tree-based algorithms](#tree-based-algorithms)
-    * [Model-independant explanations](#model-independant-explanations)
-        * [Lime](#lime)
-        * [Explanation vectors](#explanation-vectors)
-        * [An interesting way of using Game Theory](#an-interesting-way-of-using-game-theory)
+* [Why explaining individual predictions](#why-explaining-individual-predictions)
+    * [The EU regulation](#the-eu-regulation)
+* [How we can do it](#how-we-can-do-it)
+* [Model dependant methods](#model-dependant-methods)
+    * [Linear models](#linear-models)
+    * [Tree-based algorithms](#tree-based-algorithms)
+* [Model-independant explanations](#model-independant-explanations)
+    * [Lime](#lime)
+    * [Explanation vectors](#explanation-vectors)
+    * [An interesting way of using Game Theory](#an-interesting-way-of-using-game-theory)
 
 ### Why explaining individual predictions
 
