@@ -24,6 +24,12 @@ class LimeWrapper:
             if discretizer not in ['quartile', 'decile', 'entropy']:
                 discretizer = 'quartile'
 
+            if discretizer == 'entropy':
+                training_labels = target
+            else:
+                training_labels = None
+
+
         # Features - detecting categoricals and label encoding
         features = train_x.columns.tolist()
         cat = train_x.select_dtypes(include=[object]).columns.tolist() 
@@ -61,6 +67,7 @@ class LimeWrapper:
                 kernel_width=kernel_width,
                 discretize_continuous=discretize,
                 discretizer=discretizer, 
+                training_labels=training_labels,
                 verbose=verbose)
 
     def explain(self, instance, num_features=10, num_samples=1000, labels=None, show=True):     
