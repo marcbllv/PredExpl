@@ -125,7 +125,7 @@ contribution.
 
 You can find **an implementation of this method
 [here](https://github.com/andosa/treeinterpreter) and it has been tested on a
-house pricing dataset [on this notebook](treeinterpreter.ipynb).**
+house pricing dataset [on this notebook](notebooks/treeinterpreter.ipynb).**
 
 Yet, even if this method is interesting to identify the important features
 involved in the prediction, it lacks a sign: it's not possible to know whether
@@ -170,9 +170,9 @@ of Lime a bit easier.
 Lime works on various type of data and models. Here you can find several
 notebooks on text and numerical data: 
 
-- [On a credit dataset - classification](german_credit.ipynb)
-- [On a house prices dataset - regression](houses.ipynb) 
-- [On recipes ingredients dataset - text data](whatscooking.ipynb)
+- [On a credit dataset - classification](notebooks/german_credit.ipynb)
+- [On a house prices dataset - regression](notebooks/houses.ipynb) 
+- [On recipes ingredients dataset - text data](notebooks/whatscooking.ipynb)
 
 But note that **Lime does not work yet on datasets with text and tabular
 data**. In that case you should turn all your data into numbers, including your
