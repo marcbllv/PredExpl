@@ -125,7 +125,7 @@ contribution.
 
 You can find **an implementation of this method
 [here](https://github.com/andosa/treeinterpreter) and it has been tested on a
-house pricing dataset [on this notebook](tree/master/notebooks/treeinterpreter.ipynb).**
+house pricing dataset [on this notebook](notebooks).**
 
 Yet, even if this method is interesting to identify the important features
 involved in the prediction, it lacks a sign: it's not possible to know whether
